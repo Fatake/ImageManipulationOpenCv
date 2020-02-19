@@ -4,7 +4,7 @@ import cv2
 #
 # Funcion que hace una imagen transladada en x, y
 #
-def imageTranslate(imagen, x, y):
+def translate(imagen, x, y):
     '''
     Matriz M que define cuantos pixeles de desplazamiento
     [1,0,tx] donde tx es el numero de pixeles que se movera a la izquierda o derecha

@@ -11,11 +11,11 @@ args = vars(ap.parse_args())
 imagen = cv2.imread(args["imagen"])
 cv2.imshow("Original",imagen)
 
-desplazo = imutils.imageTranslate(imagen, 0, 100)
+desplazo = imutils.translate(imagen, 0, 100)
 cv2.imshow("Imagen desplazada abajo derecha",desplazo)
 
 M = np.float32([[1, 0, -50], [0, 1, -90]])
-desplazo = imutils.imageTranslate(imagen, -50, -90)
+desplazo = imutils.translate(imagen, -50, -90)
 cv2.imshow("Imagen Desplazada arriba izquierda", desplazo)
 
 cv2.waitKey(0)
