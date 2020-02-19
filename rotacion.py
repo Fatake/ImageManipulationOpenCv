@@ -11,12 +11,13 @@ args = vars(ap.parse_args())
 imagen = cv2.imread(args["imagen"])
 cv2.imshow("Original",imagen)
 
-desplazo = imutils.imageTranslate(imagen, 0, 100)
-cv2.imshow("Imagen desplazada abajo derecha",desplazo)
+(h, w) = imagen.shape[:2]
+centro = (w // 2, h // 2)
 
-M = np.float32([[1, 0, -50], [0, 1, -90]])
-desplazo = imutils.imageTranslate(imagen, -50, -90)
-cv2.imshow("Imagen Desplazada arriba izquierda", desplazo)
+M = cv2.getRotationMatrix2D(centro, 45, 1.0)
+rotada = cv2.warpAffine(imagen, M, (w,h))
+cv2.imshow("Rotada 45"+rotada)
+
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
