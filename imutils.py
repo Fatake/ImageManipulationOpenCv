@@ -37,6 +37,8 @@ def rotate(imagen, angulo, center = None, scale = 1.0):
 # Funcion que reescala una imagen
 #
 def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
+    # Inter puede ser : cv2.INTER_LINEAR,cv2.INTER_CUBIC,cv2.INTER_NEAREST
+    # Ejemplo resized = imutils.resize(image, height = 50)
     dim = None
     (h, w) = image.shape[:2]
     if width is None and height is None:
@@ -51,3 +53,4 @@ def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
     resized = cv2.resize(image, dim, interpolation = inter)
 
     return resized
+
