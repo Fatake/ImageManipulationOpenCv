@@ -19,3 +19,16 @@ def imageTranslate(imagen, x, y):
     desplazada = cv2.warpAffine(imagen, M, (imagen.shape[1], imagen.shape[0]))
 
     return desplazada
+
+#
+# Funcion que rota una Imagen
+#
+def rotate(imagen, angulo, center = None, scale = 1.0):
+    (h, w) = imagen.shape[:2]
+    if center is None:
+        center = (w // 2, h // 2)
+
+    M = cv2.getRotationMatrix2D(center, angulo, scale)
+    rotada = cv2.warpAffine(imagen, M, (w, h))
+
+    return rotada
