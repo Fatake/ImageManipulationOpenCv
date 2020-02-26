@@ -5,6 +5,9 @@ the image that interests us.
 
 uses:
     computer xision system to recognize faces
+
+EL punto de la mascaras es centrarnos en un punto de la imagen que 
+es de especial Interes
 '''
 import numpy as np
 import argparse
