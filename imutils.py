@@ -1,4 +1,5 @@
 import numpy as np
+import argparse
 import cv2
 
 #
@@ -53,4 +54,3 @@ def resize(image, width = None, height = None, inter = cv2.INTER_AREA):
     resized = cv2.resize(image, dim, interpolation = inter)
 
     return resized
-
