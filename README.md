@@ -12,3 +12,4 @@ Repository of digital image manipulation code through Opencv in python3.6
  7. Masks
  8. ColorSpaces
  9. Histograms
+ 10. blurring
